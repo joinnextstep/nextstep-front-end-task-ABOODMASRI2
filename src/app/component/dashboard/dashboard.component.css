@@ -1,0 +1,640 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Petit+Formal+Script&display=swap');
+.toggle{
+    position:relative;
+    
+  }
+  
+  #toggle-input{
+    display:block;
+    -webkit-appearance:none;
+    width:80px;
+    height:30px;
+    border-radius:100px;
+    border:3px solid #aaa;
+    cursor:pointer;
+    transition:all 0.3s;
+    
+  }
+  
+  .toggle-circle{
+    
+    position:absolute;
+    width:30px;
+    height:30px;
+    background-color:#aaa;
+    border-radius:50%;
+    left:0;
+    top:15PX;
+    transform:translateY(-50%);
+    cursor:pointer;
+    transition:all 0.3s;
+  }
+  
+  #toggle-input:checked ~ .toggle-circle{
+    background-color:rgba(255, 255, 255, 0.692);
+    transform:translate(50px,-50%);
+  }
+  
+  #toggle-input:checked{
+    background-color:#00c897;
+    border:3px solid #fff;
+  }
+
+.in{
+    
+	padding: 10px 20px;
+	background: #f4f7f8;
+    height: 40px;
+    width: 100%;
+	border-radius: 8px;
+	
+}
+
+
+.container  {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 700px;
+    width: 700px;
+    background: #f2f2f2;
+    overflow: hidden;
+    border-radius: 20px;
+    
+    box-shadow: 0 0 20px 8px #061175;
+  }
+  h1{
+      text-align: center;
+      color: #f5f5f5;
+      background-color:  rgb(32, 32, 78);
+      box-shadow: 0 0 15px 4px #0455ec;
+      font-family: 'Be Vietnam Pro', sans-serif;
+      font-family: 'Petit Formal Script', cursive;
+  }
+  .content{
+      margin: 10px
+      
+  }
+
+
+
+a{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #03c4f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+   margin-top: 15px;
+   margin-left: 240px;
+   
+}
+
+a:nth-child(1){
+    filter: hue-rotate(270deg);
+}
+a:nth-child(2){
+    filter: hue-rotate(110deg);
+}
+a span{
+    position: absolute;
+    display: block;
+}
+a span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#f40303);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#f40303);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+a span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#0313f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#1303f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}
+
+
+.true{
+    
+  width: 40px;
+  height: 35px;
+   
+   margin-left: -120px;
+     
+     
+ }
+ .name{
+   box-shadow: 0 0 15px 4px #0455ec;
+ 
+   display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background-color: #ffffff;
+ padding: 10px;
+ margin: 10px;
+ border-radius: 5px;
+ 
+ }
+ .put{
+   display: flex;
+   gap: 10px;
+   
+ }
+ .edit{
+   background-image: linear-gradient(#1c0dea, #ea0d3d);
+   box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+   border-radius: 4px;
+   box-sizing: border-box;
+   cursor: pointer;
+   color: #fff;
+   border: 2px;
+  width: 30px;
+ height: 35px;
+  text-align: center;
+ 
+ 
+ }
+ .delete{
+   background-image: linear-gradient(#1c0dea, #ea0d3d);
+   box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+   border-radius: 4px;
+   box-sizing: border-box;
+   cursor: pointer;
+   color: #fff;
+   border: 2px;
+  width: 30px;
+ height: 35px;
+  text-align: center;
+ 
+ 
+ }
+
+.btn{
+  background-image: linear-gradient(#ff0000, #e02850);
+}
+
+@media(max-width:568px){
+  .btn{
+    background-image: linear-gradient(#ff0000, #e02850);
+  }
+  .container  {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 500px;
+    width: 500px;
+    background: #f2f2f2;
+    overflow: hidden;
+    border-radius: 20px;
+    
+    box-shadow: 0 0 20px 8px #061175;
+  }
+  h1{
+      text-align: center;
+      color: #f5f5f5;
+      background-color:  rgb(32, 32, 78);
+      box-shadow: 0 0 15px 4px #0455ec;
+      font-family: 'Be Vietnam Pro', sans-serif;
+      font-family: 'Petit Formal Script', cursive;
+  }
+  .content{
+      margin: 10px
+      
+  }
+  a{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #03c4f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+   margin-top: 15px;
+   margin-left: 150px;
+   
+}
+   .true{
+    
+  width: 40px;
+  height: 35px;
+   
+   margin-left: -120px;
+     
+     
+ }
+ .name{
+   box-shadow: 0 0 15px 4px #0455ec;
+ 
+   display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background-color: #ffffff;
+ padding: 10px;
+ margin: 10px;
+ border-radius: 5px;
+ 
+ }
+ .put{
+   display: flex;
+   gap: 10px;
+   
+ }
+ .edit{
+   background-image: linear-gradient(#1c0dea, #ea0d3d);
+   box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+   border-radius: 4px;
+   box-sizing: border-box;
+   cursor: pointer;
+   color: #fff;
+   border: 2px;
+  width: 30px;
+ height: 35px;
+  text-align: center;
+ 
+ 
+ }
+ .delete{
+   background-image: linear-gradient(#1c0dea, #ea0d3d);
+   box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+   border-radius: 4px;
+   box-sizing: border-box;
+   cursor: pointer;
+   color: #fff;
+   border: 2px;
+  width: 30px;
+ height: 35px;
+  text-align: center;
+ 
+ 
+ }
+
+}
+@media(max-width:506px){
+  .btn{
+    background-image: linear-gradient(#ff0000, #e02850);
+  }
+  .container  {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 500px;
+    width: 400px;
+    background: #f2f2f2;
+    overflow: hidden;
+    border-radius: 20px;
+    
+    box-shadow: 0 0 20px 8px #061175;
+  }
+  h1{
+      text-align: center;
+      color: #f5f5f5;
+      background-color:  rgb(32, 32, 78);
+      box-shadow: 0 0 15px 4px #0455ec;
+      font-family: 'Be Vietnam Pro', sans-serif;
+      font-family: 'Petit Formal Script', cursive;
+  }
+  .content{
+      margin: 10px
+      
+  }
+  a{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #03c4f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+   margin-top: 15px;
+   margin-left: 150px;
+   
+}
+   .true{
+    
+  width: 40px;
+  height: 35px;
+   
+   margin-left: -120px;
+     
+     
+ }
+ .name{
+   box-shadow: 0 0 15px 4px #0455ec;
+ 
+   display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background-color: #ffffff;
+ padding: 10px;
+ margin: 10px;
+ border-radius: 5px;
+ 
+ }
+ .put{
+   display: flex;
+   gap: 10px;
+   
+ }
+ .edit{
+   background-image: linear-gradient(#1c0dea, #ea0d3d);
+   box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+   border-radius: 4px;
+   box-sizing: border-box;
+   cursor: pointer;
+   color: #fff;
+   border: 2px;
+  width: 30px;
+ height: 35px;
+  text-align: center;
+ 
+ 
+ }
+ .delete{
+   background-image: linear-gradient(#1c0dea, #ea0d3d);
+   box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+   border-radius: 4px;
+   box-sizing: border-box;
+   cursor: pointer;
+   color: #fff;
+   border: 2px;
+  width: 30px;
+ height: 35px;
+  text-align: center;
+ 
+ 
+ }
+
+}
+@media(max-width:506px){
+  .btn{
+    background-image: linear-gradient(#ff0000, #e02850);
+  }
+  .container  {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 500px;
+    width: 350px;
+    background: #f2f2f2;
+    overflow: hidden;
+    border-radius: 20px;
+    
+    box-shadow: 0 0 20px 8px #061175;
+  }
+  h1{
+      text-align: center;
+      color: #f5f5f5;
+      background-color:  rgb(32, 32, 78);
+      box-shadow: 0 0 15px 4px #0455ec;
+      font-family: 'Be Vietnam Pro', sans-serif;
+      font-family: 'Petit Formal Script', cursive;
+  }
+  .content{
+      margin: 10px
+      
+  }
+  a{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #03c4f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+   margin-top: 15px;
+   margin-left: 75px;
+   
+}
+   .true{
+    
+  width: 40px;
+  height: 35px;
+   
+   margin-left: -120px;
+     
+     
+ }
+ .name{
+   box-shadow: 0 0 15px 4px #0455ec;
+ 
+   display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background-color: #ffffff;
+ padding: 10px;
+ margin: 10px;
+ border-radius: 5px;
+ 
+ }
+ .put{
+   display: flex;
+   gap: 10px;
+   
+ }
+ .edit{
+   background-image: linear-gradient(#1c0dea, #ea0d3d);
+   box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+   border-radius: 4px;
+   box-sizing: border-box;
+   cursor: pointer;
+   color: #fff;
+   border: 2px;
+  width: 30px;
+ height: 35px;
+  text-align: center;
+ 
+ 
+ }
+ .delete{
+   background-image: linear-gradient(#1c0dea, #ea0d3d);
+   box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+   border-radius: 4px;
+   box-sizing: border-box;
+   cursor: pointer;
+   color: #fff;
+   border: 2px;
+  width: 30px;
+ height: 35px;
+  text-align: center;
+ 
+ 
+ }
+
+}
+@media(max-width:280px){
+  .btn{
+    background-image: linear-gradient(#ff0000, #e02850);
+  }
+  .container  {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 500px;
+    width: 250px;
+    background: #f2f2f2;
+    overflow: hidden;
+    border-radius: 20px;
+    
+    box-shadow: 0 0 20px 8px #061175;
+  }
+  h1{
+      text-align: center;
+      color: #f5f5f5;
+      background-color:  rgb(32, 32, 78);
+      box-shadow: 0 0 15px 4px #0455ec;
+      font-family: 'Be Vietnam Pro', sans-serif;
+      font-family: 'Petit Formal Script', cursive;
+  }
+  .content{
+      margin: 10px
+      
+  }
+  a{
+    position: relative;
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 40px 0;
+    color: #03c4f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+   margin-top: 15px;
+   margin-left: 40px;
+   
+}
+   .true{
+    
+  width: 40px;
+  height: 35px;
+   
+   margin-left: -120px;
+     
+     
+ }
+ .name{
+   box-shadow: 0 0 15px 4px #0455ec;
+ 
+   display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background-color: #ffffff;
+ padding: 10px;
+ margin: 10px;
+ border-radius: 5px;
+ 
+ }
+ .put{
+   display: flex;
+   gap: 10px;
+   
+ }
+ .edit{
+   background-image: linear-gradient(#1c0dea, #ea0d3d);
+   box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+   border-radius: 4px;
+   box-sizing: border-box;
+   cursor: pointer;
+   color: #fff;
+   border: 2px;
+  width: 30px;
+ height: 35px;
+  text-align: center;
+ 
+ 
+ }
+ .delete{
+   background-image: linear-gradient(#1c0dea, #ea0d3d);
+   box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+   border-radius: 4px;
+   box-sizing: border-box;
+   cursor: pointer;
+   color: #fff;
+   border: 2px;
+  width: 30px;
+ height: 35px;
+  text-align: center;
+ 
+ 
+ }
+
+}
+
+/**/
+

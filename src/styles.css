@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  
+        background-image: url("assets/5k.jpg") ;
+        
+       background-size:auto;
+    
+}
+@media(max-width:820px){
+        body{
+  
+                background-image: url("assets/5k.jpg")  ;
+                
+               background-size: auto;
+            
+        }
+}
