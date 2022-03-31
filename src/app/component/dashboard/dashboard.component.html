@@ -1,0 +1,98 @@
+<div class="container">
+    <div class="content ">
+        <h1>todo</h1>
+    
+        <input class="in"  type="text"  placeholder="Enter task"  [(ngModel)]="addTaskValue" >
+        <a  type="button" id="button-addon2" (click)="addTask()"  >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            New-Task
+        </a>
+        <h4 class="text-primary">In-progress</h4>
+
+         <div class="name" *ngFor="let task of taskArr">
+
+    <div class="crd"> {{task.name}} </div>
+    <div class="put">
+        <label for="toggle-input" class="toggle">
+            <input type="checkbox" id="toggle-input" />
+            <span class="toggle-circle"></span>
+        </label>
+        <button href="card" class="edit  " (click)="showTask()"  >E</button> 
+        <button class="delete " (click)="deleteTask(task)">X</button>
+        
+       <div class="card" *ngIf="showedit">
+            <input type="text" class="form-control" placeholder="Enter task " name="task" [(ngModel)]="editTaskValue">
+            <button class="btn" type="button" data-bs-dismiss="modal" (click)="editTask(task)">Update</button>
+          </div>
+    </div>
+
+      <!--  <div class="taske " *ngFor="let task of taskArr">
+                           <div class="card "  > {{task.name}} </div>
+                   
+<div class="butt">
+    <label for="toggle-input" class="toggle">
+    
+        <input type="checkbox" id="toggle-input" />
+        <span class="toggle-circle"></span>
+      </label>
+   
+              <button href="card" class="e  " (click)="editTask(task)"  >e</button> 
+               
+
+                 
+                  <button class="x " (click)="deleteTask(task)">x</button>   --> 
+                 <!-- <label for="check">Click me</label>-->
+               
+                
+                  
+          </div>
+          
+  
+       
+     
+    </div>
+  </div>
+
+
+
+<!-- HTML !-->
+
+
+
+
+<!--<div class="container-fluid bg-light">
+    <div class="container bg-light">
+        <input class="true" type="checkbox"  >
+        <div class="row mt-4" style="height : 500px;">
+            
+            <div class="col"></div>
+            <div class="col-md-6 bg-white shadow">
+                <div class="card bg-warning mt-4">
+                    <h4 class="text-white ps-3 pb-2">TO DO list</h4>
+                </div>
+                <div class="shadow">
+                    <div class="input-group p-4">
+                        <input type="text" class="form-control" placeholder="Enter task" name="task" [(ngModel)]="addTaskValue" >
+                        <button class="btn btn-outline-success" type="button" id="button-addon2" (click)="addTask()"  [disabled]="!addTaskValue">+</button>
+                      </div>
+                </div>
+                <h4 class="text-primary mt-4">Tasks</h4>
+                <div style="overflow: auto; height: 350px;">
+                <div class="m-3" *ngFor="let task of taskArr">
+                    <div class="p-2 shadow border">
+                      <div class="input-group row ps-3">
+                          <div class="card col-md-10 border-0"> {{task.name}}</div>
+                          <button class="btn btn-outline-primary col me-2" (click)="editTask(task)">e</button>
+                          <button class="btn btn-outline-danger col" (click)="deleteTask(task)">x</button>
+
+                      </div>
+                    </div>
+                </div></div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+</div>!-->
